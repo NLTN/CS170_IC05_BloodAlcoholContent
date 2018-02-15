@@ -6,6 +6,7 @@
 
     IC05_BloodAlcoholContent
  */
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class BloodAlcoholContent {
@@ -15,6 +16,8 @@ public class BloodAlcoholContent {
 	public static void main(String[] args) {
 		// Variables
 		double drinks, weight, BAC;
+		DecimalFormat formatter = new DecimalFormat("0.000");
+		
 		Scanner consoleScanner = new Scanner(System.in);
 
 		System.out.print("Enter the number of alcoholic drinks consumed: ");
@@ -31,7 +34,8 @@ public class BloodAlcoholContent {
 
 		// Display
 		if (BAC > BAC_LIMIT) {
-			System.out.println("\nAccording to the state of California, you are intoxicated. Do not drive!");
+			System.out.println("\nYour BAC is " + formatter.format(BAC));
+			System.out.println("According to the state of California, you are intoxicated. Do not drive!");
 		} else {
 			System.out.println("\nYou can drive");
 		}
