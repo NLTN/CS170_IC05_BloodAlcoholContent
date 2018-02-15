@@ -31,9 +31,9 @@ public class BloodAlcoholContent {
 
 		// Display
 		if (BAC > BAC_LIMIT) {
-			System.out.println("\n According to the state of California, you are intoxicated. Do not drive!");
+			System.out.println("\nAccording to the state of California, you are intoxicated. Do not drive!");
 		} else {
-			System.out.println("\n You can drive");
+			System.out.println("\nYou can drive");
 		}
 	}
 }
